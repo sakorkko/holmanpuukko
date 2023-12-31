@@ -1,0 +1,42 @@
+.knife-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  flex-basis: 3rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 90rem;
+}
+
+.knife-img,
+.knife-info {
+  flex-basis: 50%;
+}
+
+.knife-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  padding: 0 2rem;
+}
+
+.knife-info h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: white;
+}
+
+.knife-info p {
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+}
+
+.knife-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}

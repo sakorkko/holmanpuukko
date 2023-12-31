@@ -1,0 +1,57 @@
+header {
+  background-color: #2e455a;
+  height: 4rem;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat Variable", sans-serif;
+  padding: 0 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 200;
+  position: relative;
+  transition: color 0, transform 0;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background: #c4c4c4;
+  transition: width 0.3s, left 0.3s;
+  transform: translateX(-50%);
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+header a:active {
+  color: #6d6d6d;
+  transform: scale(0.95);
+}
+
+header a:active::after {
+  background: #6d6d6d;
+}

@@ -1,0 +1,38 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact Form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.contact input,
+.contact textarea,
+.contact select,
+.contact button {
+  background-color: #2e455a;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact textarea {
+  height: 10rem;
+  width: 100%;
+  resize: vertical;
+}

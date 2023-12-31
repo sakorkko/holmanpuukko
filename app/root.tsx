@@ -8,10 +8,20 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import rootStyles from "./root.css";
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+import "@fontsource-variable/montserrat/wght.css";
+import { Footer, links as footerLinks } from "./components/Footer";
+import { Header, links as headerLinks } from "./components/Header";
+
+export const links: LinksFunction = () => {
+  return [
+    { rel: "stylesheet", href: rootStyles },
+    ...footerLinks(),
+    ...headerLinks(),
+    ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  ];
+};
 
 export default function App() {
   return (
@@ -23,7 +33,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Header />
+        <div className="outlet">
+          <Outlet />
+        </div>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

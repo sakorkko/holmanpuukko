@@ -1,0 +1,63 @@
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input,
+textarea,
+label {
+  font-family: "Montserrat Variable", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  color: white;
+  border-bottom: none;
+}
+
+.outlet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+body {
+  background-color: #2e455a;
+}
