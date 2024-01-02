@@ -1,19 +1,17 @@
 import type { SSTConfig } from "sst";
-import { RemixSite } from "sst/constructs";
+import { RemixStack } from "./stacks/remixSite";
 
 export default {
-  config(_input) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  config(input) {
     return {
-      name: "app",
-      region: "us-east-1",
+      name: "holmanpuukko",
+      region: "eu-central-1",
+      stage: "prod",
     };
   },
   stacks(app) {
-    app.stack(function Site({ stack }) {
-      const site = new RemixSite(stack, "site");
-      stack.addOutputs({
-        url: site.url,
-      });
-    });
+    app.stack(RemixStack);
+    app.setDefaultRemovalPolicy("destroy");
   },
 } satisfies SSTConfig;

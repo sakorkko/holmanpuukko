@@ -1,9 +1,5 @@
-node_modules
-
-/.cache
-/build
-/public/build
+node_modules/
+build/
 .env
-
-# sst
-.sst
+.sst/
+.cache/
